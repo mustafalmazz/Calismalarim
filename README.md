@@ -1,2 +1,2 @@
-# C-al-malar-m
+# C# Calismalarim
 Öğrenim sürecinde yazdığım kodlarım
