@@ -1,0 +1,14 @@
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\bin\Debug\net6.0\Methods.exe
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\bin\Debug\net6.0\Methods.deps.json
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\bin\Debug\net6.0\Methods.runtimeconfig.json
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\bin\Debug\net6.0\Methods.dll
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\bin\Debug\net6.0\Methods.pdb
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.AssemblyInfoInputs.cache
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.AssemblyInfo.cs
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.csproj.CoreCompileInputs.cache
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.dll
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\refint\Methods.dll
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.pdb
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\Methods.genruntimeconfig.cache
+C:\Users\mustafa\source\repos\TypesAndVariables\Methods\obj\Debug\net6.0\ref\Methods.dll
