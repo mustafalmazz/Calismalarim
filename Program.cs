@@ -1,38 +1,52 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NesneSınav
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        int bakiye = 1000;
+        while (true)
         {
-            Personel personel = new Personel();
-            personel.ad = "mustafa";
-            Console.WriteLine(personel.ad);
+            Console.WriteLine("\nATM'ye Hoş Geldiniz!");
+            Console.WriteLine("1. Bakiye Görüntüle");
+            Console.WriteLine("2. Para Çek");
+            Console.WriteLine("3. Para Yatır");
+            Console.WriteLine("4. Çıkış");
+            Console.Write("Seçiminiz: ");
 
-            Console.ReadLine();
-        }
-       public class Personel
-        {
-            public string ad {  get; set; }
-            public string soyad { get; set; }
-            public string tckn { get; set; }
+            int secim = int.Parse(Console.ReadLine());
 
-            public Personel()
+            switch (secim)
             {
-                Console.WriteLine("Çalıştı");
+                case 1:
+                    Console.WriteLine($"Mevcut Bakiyeniz: {bakiye} TL");
+                    break;
+                case 2:
+                    Console.Write("Çekmek istediğiniz tutarı girin: ");
+                    int cekilecekTutar = int.Parse(Console.ReadLine());
+                    if (cekilecekTutar > bakiye)
+                    {
+                        Console.WriteLine("Yetersiz bakiye!");
+                    }
+                    else
+                    {
+                        bakiye -= cekilecekTutar;
+                        Console.WriteLine($"Yeni bakiyeniz: {bakiye} TL");
+                    }
+                    break;
+                case 3:
+                    Console.Write("Yatırmak istediğiniz tutarı girin: ");
+                    int yatirilacakTutar = int.Parse(Console.ReadLine());
+                    bakiye += yatirilacakTutar;
+                    Console.WriteLine($"Yeni bakiyeniz: {bakiye} TL");
+                    break;
+                case 4:
+                    Console.WriteLine("Çıkış yapılıyor. İyi günler!");
+                    return;
+                default:
+                    Console.WriteLine("Geçersiz seçim. Tekrar deneyin.");
+                    break;
             }
-            //public Personel()
-            //{
-            //    Console.WriteLine("Yapıcı metod çalıştı.");
-            //
-        }
         }
     }
-        
-
+}
