@@ -1,52 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace abstracts
 {
-    static void Main()
+    public class Program
     {
-        int bakiye = 1000;
-        while (true)
+        static void Main(string[] args)
         {
-            Console.WriteLine("\nATM'ye Hoş Geldiniz!");
-            Console.WriteLine("1. Bakiye Görüntüle");
-            Console.WriteLine("2. Para Çek");
-            Console.WriteLine("3. Para Yatır");
-            Console.WriteLine("4. Çıkış");
-            Console.Write("Seçiminiz: ");
 
-            int secim = int.Parse(Console.ReadLine());
+            Ornek ornek = new Calisma();
 
-            switch (secim)
-            {
-                case 1:
-                    Console.WriteLine($"Mevcut Bakiyeniz: {bakiye} TL");
-                    break;
-                case 2:
-                    Console.Write("Çekmek istediğiniz tutarı girin: ");
-                    int cekilecekTutar = int.Parse(Console.ReadLine());
-                    if (cekilecekTutar > bakiye)
-                    {
-                        Console.WriteLine("Yetersiz bakiye!");
-                    }
-                    else
-                    {
-                        bakiye -= cekilecekTutar;
-                        Console.WriteLine($"Yeni bakiyeniz: {bakiye} TL");
-                    }
-                    break;
-                case 3:
-                    Console.Write("Yatırmak istediğiniz tutarı girin: ");
-                    int yatirilacakTutar = int.Parse(Console.ReadLine());
-                    bakiye += yatirilacakTutar;
-                    Console.WriteLine($"Yeni bakiyeniz: {bakiye} TL");
-                    break;
-                case 4:
-                    Console.WriteLine("Çıkış yapılıyor. İyi günler!");
-                    return;
-                default:
-                    Console.WriteLine("Geçersiz seçim. Tekrar deneyin.");
-                    break;
-            }
+        }
+    }
+
+
+
+
+    abstract class Ornek
+    {
+        public abstract void X();
+
+        public abstract int y { get; set; }
+
+    }
+
+    class Calisma : Ornek
+    {
+        public override int y { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public override void X()
+        {
+            throw new NotImplementedException();
         }
     }
 }
