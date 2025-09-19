@@ -1,42 +1,20 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TurkcellDependencyInjection.Helpers;
-using TurkcellDependencyInjection.Models;
+using OfisVeriAlma.Models;
 
-namespace TurkcellDependencyInjection.Controllers
+namespace OfisVeriAlma.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IHelper _helper;
-        //Helper _helper2;
-
-        public HomeController(ILogger<HomeController> logger, IHelper helper/*,Helper helper2*/)
+   
+        public IActionResult Index()
         {
-            _helper = helper;
-            //_helper2 = helper2;
-            _logger = logger;
-        }
-
-        public IActionResult Index([FromServices]IHelper helper2)
-        {
-            var text = "asp";
-            var upperText = _helper.Upper(text);
-
-            var status = _helper.Equals(helper2);//nesnein tek nesne olduðunu kontrol
-
-
-            //Helper h = new Helper();
-
             return View();
         }
 
         public IActionResult Privacy()
         {
-            //var text = "Mesaj";
-            //var upperText=_helper2.Upper(text);
-
-
             return View();
         }
 

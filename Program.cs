@@ -1,40 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+var builder = WebApplication.CreateBuilder(args);
 
-namespace abstracts
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-
-            Ornek ornek = new Calisma();
-
-        }
-    }
-
-
-
-
-    abstract class Ornek
-    {
-        public abstract void X();
-
-        public abstract int y { get; set; }
-
-    }
-
-    class Calisma : Ornek
-    {
-        public override int y { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public override void X()
-        {
-            throw new NotImplementedException();
-        }
-    }
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapStaticAssets();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
+
+
+app.Run();
